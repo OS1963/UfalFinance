@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFALFinance - Página Inicial</title>
+
+    <!-- normalize css para padronizar a exibição do site em diversos navegadores-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- para permitir/exibir o uso das novas tags html5 nos navegadores que ainda não suportam essas novas tags -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Link do arquivo JS -->
+    <script src="js/script.js"></script>
+
+ 
+</head>
+<body>
+    <section id="principal">
+        <header id="topo">
+               <div id="logo">
+                   <a href=""><h1>UFALFinance</h1></a>
+               </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="educacao.html">Educação Fincaneira</a>
+                    </li>
+                    <li>
+                        <a href="empreendedorismo.html"  id="selecionado">Empreendedorismo</a>
+                    </li>
+                    <li>
+                        <a href="cal.html">Calculadora Fincaneira</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <span class="clear"></span>
+
+        <section id="area-conteudo">
+            <article id="conteudo-principal">
+                <h1>A arte de empreender</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum animi odio, odit possimus labore dolores nam ipsa ducimus! Perferendis unde minima sed quibusdam soluta animi repudiandae iusto esse commodi optio!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci incidunt optio quibusdam blanditiis tempore error. Magnam voluptates et molestias numquam earum iste maiores neque aliquid harum. Atque error perferendis minus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque deleniti nihil veritatis assumenda eius nulla, natus iusto enim odio consequatur fuga at molestias blanditiis? Deleniti omnis necessitatibus eaque similique velit.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis dolorem quod laborum deleniti officiis voluptatem sunt eos? Velit culpa sed quas, praesentium eaque vero adipisci sapiente aperiam laudantium voluptatem eum.
+                </p>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, aliquid labore nostrum omnis aliquam, quibusdam laborum deserunt obcaecati dolor iure expedita quas porro dolores sed debitis animi cumque sunt tenetur.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis unde delectus ipsam necessitatibus quas culpa tempora deleniti, aperiam vel laudantium labore ipsa porro id sed. Vitae sed quidem non consectetur?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, expedita. Ratione quidem quia maiores voluptatem aut nostrum, labore, eius quod sapiente enim in quas optio perspiciatis autem ipsum ex dolorem?
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis eaque doloremque, harum numquam magnam odit ratione reprehenderit, asperiores nesciunt velit quod officia. Fugiat consectetur autem quaerat? Culpa, voluptates numquam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae odio perspiciatis quidem eos laborum adipisci dolorum fugit ab ducimus cupiditate recusandae accusantium amet laudantium cumque, tenetur, ipsum nulla inventore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus libero iusto itaque, mollitia quos optio ipsum quaerat, blanditiis eos harum facilis nam! Iure, quod! Doloremque maxime ipsum sed aperiam debitis.
+                </p>
+            </article>
+
+            <article class="conteudo" id="cont1">
+                <h2>O empreendedorismo no brasil</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque accusantium consequuntur necessitatibus mollitia, voluptatibus dolores maxime fugiat cum, nulla eos eum possimus unde, corporis officia quod. Et, autem laudantium.
+                </p>
+                <br>
+                <a href="#"> Leia mais</a> <!--falta adcionar o link corret-->
+            </article>
+
+            <article class="conteudo" id="cont2">
+                <h2>Educação financeira para adolescentes</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores voluptates consectetur totam nesciunt distinctio voluptatum, incidunt est modi harum beatae quisquam eveniet! Fugit nesciunt similique sunt ipsam perferendis eaque officia!
+                </p>
+                <br>
+                <a href="#">Leia mais</a>
+            </article>
+
+            <article class="conteudo" id="cont3">
+               <h2>Educação financeira crianças</h2>
+               <p>
+                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id iste nemo cupiditate commodi minima quis quidem sed, dicta porro hic velit, saepe laborum praesentium cum ex quod assumenda vel quaerat.
+               </p>
+
+               <br>
+               <a href="#">Leia mais</a>
+            </article>
+        </section>
+    </section>
+
+    <footer>
+        <p id="copy">&copy; Todos os direitos reservados</p>
+        <span id="data"></span>
+    </footer>
+    
+    <script>
+        var data = new Date()
+        var dia = String(data.getDate()).padStart(2,'0')
+        var mes = String(data.getMonth() + 1).padStart(2,'0')
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minutos = data.getMinutes()
+
+        var teste = document.getElementById('data')
+        teste.innerText = `${dia}/${mes} /${ano} - ${hora}:${minutos}`
+
+        document.getElementById('cont1').style.background = 'url(imagens/empreender.png)'
+        document.getElementById('cont2').style.background = 'url(imagens/edu_jovens.png)'
+        document.getElementById('cont3').style.background = 'url(imagens/edu_crianca.png)'
+
+        
+
+    </script>
+
+</body>
+</html>

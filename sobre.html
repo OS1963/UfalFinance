@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFALFinance - Sobre</title>
+
+    <!-- normalize css para padronizar a exibição do site em diversos navegadores-->
+    <link rel="stylesheet" href="js/normalize.css">
+
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Link do arquivo JS -->
+    <script src="js/script.js"></script>
+   
+</head>
+<body>
+    <section id="principal">
+        <header id="topo">
+               <div id="logo">
+                   <a href=""><h1>UFALFinance</h1></a>
+               </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sobre.html" id="selecionado">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="educacao.html">Educação Fincaneira</a>
+                    </li>
+                    <li>
+                        <a href="empreendedorismo.html">Empreendedorismo</a>
+                    </li>
+                    <li>
+                        <a href="cal.html">Calculadora Fincaneira</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <span class="clear"></span>
+
+        <section id="area-conteudo">
+            <article id="conteudo-principal">
+                <h1>Sobre o UFALFinance</h1>
+                <p>
+                    O UFALFinance é um site criado por estudantes do curso de Sistemas de Informação da Universidade Federal de Alagoas - UFAL. Com o intuito de disseminar notícias, entretenimento, tendências, orientações, o site foi desenvolvido tanto para o meio acadêmico quanto para o social. 
+                    Em meio a diversidade de dados, notícias e informações espalhadas em toda a internet, selecionamos uma diversidade de conteúdos para melhor ajudar as pessoas à entenderem como funciona o processo de educação financeira. <br>Além do mais, os aplicativos e cursos mais requisitados sobre o assunto foram disponibilizados no UFALFinance para auxiliar às pessoas no dia a dia.
+                    <br><br>
+                    Já para o público que procura orientação sobre empreendedorismo, o UFALFinance disponibiliza leituras enriquecedoras que ajudará aos que estão no processo de criação do próprio negócio, ajudadando-os a ter uma visão mais clara de como funciona as regras do jogo nessa área.
+
+                </p>
+            </article>
+        </section>
+    </section>
+
+    <footer>
+        <p id="ts">&copy; Todos os direitos reservados</p>
+        <span id="data"></span>
+    </footer>
+
+    <script>
+        var data = new Date()
+        var dia = String(data.getDate()).padStart(2,'0')
+        var mes = String(data.getMonth() + 1).padStart(2,'0')
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minutos = data.getMinutes()
+        var teste = document.getElementById('data')
+        teste.innerText = `${dia}/${mes} /${ano} - ${hora}:${minutos}`
+
+       
+
+    </script>
+</body>
+</html>

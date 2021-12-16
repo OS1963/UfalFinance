@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFALFinance - Educação Financeira</title>
+
+    <!-- normalize css para padronizar a exibição do site em diversos navegadores-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Link do arquivo JS -->
+    <script src="js/script.js"></script>
+   
+</head>
+<body>
+    <section id="principal">
+        <header id="topo">
+               <div id="logo">
+                   <a href=""><h1>UFALFinance</h1></a>
+               </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="educacao.html" id="selecionado">Educação Fincaneira</a>
+                    </li>
+                    <li>
+                        <a href="empreendedorismo.html">Empreendedorismo</a>
+                    </li>
+                    <li>
+                        <a href="cal.html">Calculadora Fincaneira</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <span class="clear"></span>
+
+        <section id="area-conteudo">
+            <article id="conteudo-principal">
+                <h1>Educação financeira</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ratione non quam fugiat odit minima quas error dolor sunt pariatur eos amet qui nisi accusamus quos, eveniet nam harum aperiam?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odit ea alias sed facere iste aliquid sunt, libero asperiores obcaecati iusto quis, pariatur odio blanditiis molestias? Deleniti accusantium saepe asperiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quaerat accusantium libero optio ipsa non culpa ratione consequuntur quisquam, maiores, perspiciatis dicta deserunt architecto molestiae ad et iusto qui ab!
+                </p>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut iste incidunt quia! Voluptatem corporis recusandae natus commodi neque, reprehenderit culpa nobis voluptates quasi magni quaerat sit dolorem, tenetur deserunt. Tempora!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus maiores debitis distinctio officiis eaque unde minus aspernatur asperiores, ipsum architecto consectetur harum at recusandae, accusamus reprehenderit officia nam doloribus ad?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ducimus sit officiis et sapiente omnis, rem quam consequuntur quisquam at saepe nemo incidunt hic blanditiis distinctio numquam perferendis! Quae, possimus.
+                </p>
+            </article>
+        </section>
+    </section>
+
+    <footer>
+        <p id="ts">&copy; Todos os direitos reservados</p>
+        <span id="data"></span>
+    </footer>
+
+    <script>
+        var data = new Date()
+        var dia = String(data.getDate()).padStart(2,'0')
+        var mes = String(data.getMonth() + 1).padStart(2,'0')
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minutos = data.getMinutes()
+        var teste = document.getElementById('data')
+        teste.innerText = `${dia}/${mes} /${ano} - ${hora}:${minutos}`
+
+   
+        document.getElementById('conteudo-principal').style.background = 'url(imagens/cofre1.png)'
+
+    </script>
+</body>
+</html>

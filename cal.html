@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFALFinance - Sobre</title>
+
+    <!-- normalize css para padronizar a exibição do site em diversos navegadores-->
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+
+    <!-- estilo css -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Link do arquivo JS -->
+    <script src="js/script.js"></script>
+   
+</head>
+<body>
+    <section id="principal">
+        <header id="topo">
+               <div id="logo">
+                   <a href=""><h1>UFALFinance</h1></a>
+               </div>
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="educacao.html">Educação Fincaneira</a>
+                    </li>
+                    <li>
+                        <a href="empreendedorismo.html">Empreendedorismo</a>
+                    </li>
+                    <li>
+                        <a href="cal.html" id="selecionado">Calculadora Fincaneira</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <span class="clear"></span>
+
+        <section id="area-conteudo">
+            <!-- <article id="conteudo-principal"> 
+            </article>-->
+            <article id="calc">
+                <h1>Calculadora Financeira</h1>
+                <form>
+                    <label for="name">Qual seu nome?</label>
+                    <input type="text" id="name" required autofocus> <!--O autofocus serve para dar foco e o requird serve para obrigar o usuário a clicar-->
+                    <br>
+                    <label for="salario">Qual o seu salário?</label> 
+                    <input type="number" id="salario" placeholder="R$" required min="5">
+                    <br>
+                    <label for="economiza">Quanto você economiza por mês:</label>
+                    <input type="number" id="economiza"  placeholder="R$" required min="0">
+                    <br>
+                    <input type="button" value="Consultar Situação" style="background: aqua; width: 800px; height: 50px; font-size: 1.2em; margin: 10px; border-radius: 20px;" onclick="verificaEconomia()">
+                </form>
+            </article>
+        </section>
+        <div id="resultado">
+            
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados</p>
+        <span id="data"></span>
+    </footer>
+
+    <script>
+        var data = new Date()
+        var dia = String(data.getDate()).padStart(2,'0')
+        var mes = String(data.getMonth() + 1).padStart(2,'0')
+        var ano = data.getFullYear()
+        var hora = data.getHours()
+        var minutos = data.getMinutes()
+        var teste = document.getElementById('data')
+        
+
+        // começando a pegar os dados para realizar calculo
+        // O calculo vai ser realizado considerando que uma pessoa deve guardar no mínimo 15% do seu salário
+
+        var nome = document.getElementById('name')
+        var salario = document.getElementById('salario')
+        var economiza = document.getElementById('economiza')
+        var res = document.getElementById('resultado')
+       
+    function verificaEconomia(){
+        var salarioN = Number.parseFloat(salario.value)
+        var economizaN = Number.parseFloat(economiza.value)
+        var porcentagem = economizaN / salarioN * 100 
+
+        if(economizaN < (salarioN * 0.15)){
+            res.innerHTML = `<p>${nome.value} você não está conseguindo fazer uma boa gestão do seu dinheiro! Você consegue juntar apenas ${porcentagem}% do seu salário.</p>
+            <p>
+                Segue algumas dicas que vão te ajudar:
+                Uma ação que pode ajudar a direcionar os seus rendimentos do mês é a regra 50-15-35, uma boa alternativa para organizar a vida financeira. Em resumo, a ideia é que você divida os seus ganhos mensais da seguinte maneira:
+
+                50% para despesas básicas, como aluguel, financiamentos, alimentação, contas de água e luz, supermercado e outros itens que são necessários para a sua vida;
+
+                15% para as prioridades financeiras, como o pagamento de dívidas, a construção de sua reserva de emergência e também para realizar investimentos;
+
+                35% para o seu estilo de vida, o que envolve cuidados com o corpo e a mente, como aquele cineminha, a comida especial do fim de semana, academia e viagens.
+
+                Essa regra ajudará você a distribuir melhor os seus ganhos ao longo do mês e não deixar nada faltando. Assim, além das contas, você pagará eventuais dívidas e, por fim, poderá guardar parte do salário todo mês.
+            </p>
+            `
+            document.getElementById('name').value = ''
+            document.getElementById('salario').value = ''
+            document.getElementById('economiza').value = ''
+
+            res.style.border = '10px solid red'
+        }
+
+        else if(economizaN > (salarioN * 0.15)){
+            res.innerHTML = `PARABÉNS ${nome.value}, você consegue juntar ${porcentagem}% do seu salário.`
+            document.getElementById('name').value = ''
+            document.getElementById('salario').value = ''
+            document.getElementById('economiza').value = ''
+
+            res.style.border = '10px solid #00A859'
+        }
+}
+    </script>
+</body>
+</html>
